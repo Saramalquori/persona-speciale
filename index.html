@@ -215,6 +215,32 @@
             transform: scale(1.05);
         }
 
+        /* Immagini sparse */
+        .scattered-image {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            object-fit: cover;
+            display: block;
+        }
+
+        .header-img {
+            width: 120px;
+            height: 120px;
+            margin: 15px auto 0;
+            border-radius: 50%;
+        }
+
+        .float-right {
+            float: right;
+            width: 45%;
+            margin-left: 20px;
+        }
+
+        .inline-bottom {
+            width: 100%;
+            margin-top: 15px;
+        }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 1.8em;
@@ -243,19 +269,21 @@
         <header>
             <h1><span class="heart">💜</span> La Mia Persona Speciale <span class="heart">💜</span></h1>
             <p class="subtitle">Una celebrazione dell'amicizia che mi salva ogni giorno</p>
+            <img src="images/friend1.jpg" alt="Amici che si abbracciano" class="scattered-image header-img">
         </header>
 
         <main>
             <section>
                 <div class="image-gallery">
-                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&h=500&fit=crop" alt="Due amici che sorridono insieme">
-                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500&h=500&fit=crop" alt="Due persone che ridono insieme">
+                    <img src="images/friend2.jpg" alt="Due amici che sorridono insieme">
+                    <img src="images/friend3.jpg" alt="Due persone che ridono insieme">
                 </div>
             </section>
 
             <section>
                 <h2>Chi Sei Per Me</h2>
                 <div class="intro-text">
+                    <img src="images/friend3.jpg" alt="Due amici al tramonto" class="scattered-image float-right">
                     <p>Sei più di un'amica. Sei la persona senza cui mi sentirei <span class="highlight">persa</span>. La mia bussola, il mio rifugio sicuro, la voce che mi riporta a terra quando tutto sembra crollare.</p>
                     <p style="margin-top: 15px;">In un mondo che a volte sembra troppo grande e confuso, tu sei <span class="highlight">certezza</span>. Tu sei <span class="highlight">casa</span>.</p>
                 </div>
@@ -297,6 +325,7 @@
                     "La vera amicizia non ha bisogno di continue conversazioni, di una frequenza costante. Come la gravità, agisce costante, senza rumore, sempre presente."
                 </div>
                 <div class="memories">
+                    <img src="images/friend1.jpg" alt="Bambini amici che si abbracciano" class="scattered-image inline-bottom">
                     <p><strong>I nostri ricordi preferiti:</strong></p>
                     <ul>
                         <li>Le chiacchierate a perdita d'occhio fino alle 3 di notte</li>
