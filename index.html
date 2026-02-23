@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mia Persona Speciale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        section:nth-child(1) { animation-delay: 0.2s; }
+        section:nth-child(2) { animation-delay: 0.4s; }
+        section:nth-child(3) { animation-delay: 0.6s; }
+        section:nth-child(4) { animation-delay: 0.8s; }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .intro-text {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            margin-bottom: 20px;
+        }
+
+        .qualities {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .quality {
+            background: linear-gradient(135deg, #667eea15, #764ba215);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #667eea30;
+        }
+
+        .quality strong {
+            color: #667eea;
+        }
+
+        .heart {
+            display: inline-block;
+            animation: beat 1.4s infinite;
+            margin: 0 5px;
+        }
+
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1); }
+        }
+
+        .quote {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            font-style: italic;
+            margin: 20px 0;
+            color: #856404;
+        }
+
+        .memories {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .memories li {
+            margin: 8px 0;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        footer {
+            background: #f8f9ff;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        footer p {
+            font-size: 0.95em;
+            color: #667eea;
+        }
+
+        .highlight {
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .qualities {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+
+            main {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="heart">💜</span> La Mia Persona Speciale <span class="heart">💜</span></h1>
+            <p class="subtitle">Una celebrazione dell'amicizia che mi salva ogni giorno</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Chi Sei Per Me</h2>
+                <div class="intro-text">
+                    <p>Sei più di un'amica. Sei la persona senza cui mi sentirei <span class="highlight">persa</span>. La mia bussola, il mio rifugio sicuro, la voce che mi riporta a terra quando tutto sembra crollare.</p>
+                    <p style="margin-top: 15px;">In un mondo che a volte sembra troppo grande e confuso, tu sei <span class="highlight">certezza</span>. Tu sei <span class="highlight">casa</span>.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Perché Sei Speciale</h2>
+                <div class="qualities">
+                    <div class="quality">
+                        <strong>✨ Mi capisci</strong><br>
+                        Senza bisogno di spiegare, conosci i miei silenzi.
+                    </div>
+                    <div class="quality">
+                        <strong>🌟 Mi sostieni</strong><br>
+                        Nei momenti difficili, sei sempre lì.
+                    </div>
+                    <div class="quality">
+                        <strong>💫 Mi fai ridere</strong><br>
+                        Con te, la vita diventa più leggera.
+                    </div>
+                    <div class="quality">
+                        <strong>🎯 Mi credi</strong><br>
+                        Anche quando non ci credo io stessa.
+                    </div>
+                    <div class="quality">
+                        <strong>🌈 Mi accetti</strong><br>
+                        Per quello che sono, senza filtri.
+                    </div>
+                    <div class="quality">
+                        <strong>💖 Mi ami</strong><br>
+                        Incondizionatamente, semplicemente.
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>I Nostri Momenti</h2>
+                <div class="quote">
+                    "La vera amicizia non ha bisogno di continue conversazioni, di una frequenza costante. Come la gravità, agisce costante, senza rumore, sempre presente."
+                </div>
+                <div class="memories">
+                    <p><strong>I nostri ricordi preferiti:</strong></p>
+                    <ul>
+                        <li>Le chiacchierate a perdita d'occhio fino alle 3 di notte</li>
+                        <li>Le risate incontrollabili per cose che solo noi capiamo</li>
+                        <li>I momenti quando tutto va male e tu sei lì, in silenzio</li>
+                        <li>I sogni che facciamo insieme per il nostro futuro</li>
+                        <li>Ogni singolo giorno, semplice ma prezioso</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Grazie</h2>
+                <p>Grazie per essere <span class="highlight">esattamente chi sei</span>. Grazie per avermi scelto ancora e ancora, giorno dopo giorno. Grazie per farmi sentire meno sola in questo mondo.</p>
+                <p style="margin-top: 20px;">Se dovessi perderti, mi perderei anch'io. Ma non accadrà, perché noi <span class="highlight">siamo</span>. Insieme, per sempre.</p>
+                <button onclick="celebra()">Invia Un Amore ❤️</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Fatto con amore, per la persona che mi completa 💜</p>
+            <p style="font-size: 0.9em; margin-top: 10px; color: #999;">Sempre, per sempre, dal primo giorno</p>
+        </footer>
+    </div>
+
+    <script>
+        function celebra() {
+            alert('💜 Un amore infinito per te! 💜\nSei tutto quello di cui ho bisogno.');
+            // Effetto confetti semplice
+            for(let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '💜';
+                heart.style.position = 'fixed';
+                heart.style.left = Math.random() * window.innerWidth + 'px';
+                heart.style.top = '-30px';
+                heart.style.fontSize = '30px';
+                heart.style.pointerEvents = 'none';
+                heart.style.animation = 'fall 3s linear';
+                document.body.appendChild(heart);
+                
+                setTimeout(() => heart.remove(), 3000);
+            }
+        }
+
+        // Aggiungi l'animazione di caduta al document
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
